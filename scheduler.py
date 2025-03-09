@@ -6,7 +6,7 @@ import pytz
 
 def run_notify():
     """运行notify.py脚本并记录日志"""
-    log_name = datetime.now(pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d") + ".log"
+    log_name = datetime.now(pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S") + ".log"
     log_dir = os.path.join(os.path.dirname(__file__), "logs")
     os.makedirs(log_dir, exist_ok=True)
     log_path = os.path.join(log_dir, log_name)

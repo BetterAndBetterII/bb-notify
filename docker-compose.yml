@@ -10,3 +10,4 @@ services:
     volumes:
       - ./logs:/app/logs
       - ./persist:/app/persist
+    env_file: .env

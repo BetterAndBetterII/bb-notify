@@ -6,7 +6,7 @@ import pytz
 
 def run_notify():
     """运行notify.py脚本并记录日志"""
-    log_name = datetime.now(pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S") + ".log"
+    log_name = datetime.now(pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H-%M-%S") + ".log"
     log_dir = os.path.join(os.path.dirname(__file__), "logs")
     os.makedirs(log_dir, exist_ok=True)
     log_path = os.path.join(log_dir, log_name)
@@ -17,7 +17,7 @@ def run_notify():
         )
         
         # 获取当前时间
-        current_time = datetime.now(pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S')
+        current_time = datetime.now(pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H-%M-%S')
         
         # 准备日志内容
         log_content = f'[{current_time}] '
@@ -42,7 +42,7 @@ def run_notify():
         print(error_msg)
         # 记录错误到日志文件
         with open(log_path, 'a', encoding='utf-8') as f:
-            f.write(f'[{datetime.now(pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S")}] {error_msg}\n')
+            f.write(f'[{datetime.now(pytz.timezone("Asia/Shanghai")).strftime("%Y-%m-%d %H-%M-%S")}] {error_msg}\n')
 
 def get_next_run_time(interval_minutes):
     """计算下一个执行时间点"""

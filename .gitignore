@@ -6,3 +6,4 @@ events.db
 
 .venv/
 logs/
+persist/

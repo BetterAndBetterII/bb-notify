@@ -7,5 +7,11 @@
 ## 使用
 
 ```bash
-docker run -d --env-file .env ghcr.io/betterandbetterii/bb-notify:latest
+docker-compose up -d
+```
+
+或
+
+```bash
+docker run -d --env-file .env -v ./logs:/app/logs -v ./persist:/app/persist ghcr.io/betterandbetterii/bb-notify:latest
 ```

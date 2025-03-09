@@ -167,7 +167,7 @@ event.py below
 
 
 class BaseEvent:
-    db = Database("events.db")
+    db = Database("./persist/events.db")
     title: str
     id: str
     login: Login

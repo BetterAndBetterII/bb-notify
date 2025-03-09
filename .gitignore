@@ -5,3 +5,4 @@
 events.db
 
 .venv/
+logs/
